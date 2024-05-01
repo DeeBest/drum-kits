@@ -53,17 +53,22 @@ tomSoundBtn.addEventListener('click', playTomSound);
 window.addEventListener('keydown', (e) => {
   if (e.key === 'a') {
     playCrashSound();
+    crashSoundBtn.classList.add('active');
   }
 
   if (e.key === 's') {
     playKickSound();
+
+    kickSoundBtn.classList.add('active');
   }
 
   if (e.key === 'k') {
     playSnareSound();
+    snareSoundBtn.classList.add('active');
   }
 
   if (e.key === 'l') {
     playTomSound();
+    tomSoundBtn.classList.add('active');
   }
 });
