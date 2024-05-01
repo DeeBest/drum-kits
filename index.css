@@ -69,6 +69,7 @@ footer .contact-icons {
   opacity: 0.7;
   box-shadow: none;
   transform: scale(0.98);
+  transform: rotateZ(90deg);
 }
 h1 img {
   width: 40px;
