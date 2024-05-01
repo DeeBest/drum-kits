@@ -54,21 +54,36 @@ window.addEventListener('keydown', (e) => {
   if (e.key === 'a') {
     playCrashSound();
     crashSoundBtn.classList.add('active');
+
+    setTimeout(() => {
+      crashSoundBtn.classList.remove('active');
+    }, 100);
   }
 
   if (e.key === 's') {
     playKickSound();
-
     kickSoundBtn.classList.add('active');
+
+    setTimeout(() => {
+      kickSoundBtn.classList.remove('active');
+    }, 100);
   }
 
   if (e.key === 'k') {
     playSnareSound();
     snareSoundBtn.classList.add('active');
+
+    setTimeout(() => {
+      snareSoundBtn.classList.remove('active');
+    }, 100);
   }
 
   if (e.key === 'l') {
     playTomSound();
     tomSoundBtn.classList.add('active');
+
+    setTimeout(() => {
+      tomSoundBtn.classList.remove('active');
+    }, 100);
   }
 });
