@@ -14,19 +14,35 @@ const snareSound = document.getElementById('snare-sound');
 const tomSound = document.getElementById('tom-sound');
 
 function playCrashSound() {
-  crashSound.play();
+  if (crashSound.paused) {
+    crashSound.play();
+  } else {
+    crashSound.currentTime = 0;
+  }
 }
 
 function playKickSound() {
-  kickSound.play();
+  if (kickSound.paused) {
+    kickSound.play();
+  } else {
+    kickSound.currentTime = 0;
+  }
 }
 
 function playSnareSound() {
-  snareSound.play();
+  if (snareSound.paused) {
+    snareSound.play();
+  } else {
+    snareSound.currentTime = 0;
+  }
 }
 
 function playTomSound() {
-  tomSound.play();
+  if (tomSound.paused) {
+    tomSound.play();
+  } else {
+    tomSound.currentTime = 0;
+  }
 }
 
 crashSoundBtn.addEventListener('click', playCrashSound);
