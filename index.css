@@ -20,12 +20,17 @@ body {
 header,
 main,
 footer {
-  min-width: 100%;
-  padding: 20px;
+  width: 100%;
+  padding: 15px;
 }
 header {
-  font-size: 2rem;
+  font-size: 1.5rem;
   text-shadow: 2px 0px 12px rgba(0, 0, 0, 0.8);
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  text-wrap: nowrap;
 }
 main {
   flex: 1;
@@ -65,14 +70,19 @@ footer .contact-icons {
   box-shadow: none;
   transform: scale(0.98);
 }
+h1 img {
+  width: 40px;
+}
 #container {
-  width: 90%;
+  width: 830px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 10px;
 }
-#container div {
+#container .instrument-container {
   box-shadow: 1px 2px 12px rgba(0, 0, 0, 0.8);
+  color: hsla(111, 48%, 19%);
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.9);
   border-radius: 10px;
   padding: 20px;
   display: flex;
@@ -80,13 +90,34 @@ footer .contact-icons {
   text-align: center;
   justify-content: center;
   align-items: center;
+  font-size: 1.6rem;
+  cursor: pointer;
 }
-#container div img {
-  width: 65px;
+.instrument-container:active {
+  opacity: 0.9;
+  box-shadow: none;
+  transform: scale(0.95);
+}
+#crash {
+  background: url(./images/crash.jpg);
+  background-size: contain;
+}
+#kick {
+  background: url(./images/kick.jpg);
+  background-size: contain;
+}
+#snare {
+  background: url(./images/snare.jpg);
+  background-size: contain;
+}
+#tom {
+  background: url(./images/tom.jpg);
+  background-size: contain;
 }
 
-@media screen and (max-width: 718px) {
+@media screen and (max-width: 850px) {
   #container {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
   }
 }
