@@ -8,18 +8,44 @@ const kickSoundBtn = document.getElementById('kick');
 const snareSoundBtn = document.getElementById('snare');
 const tomSoundBtn = document.getElementById('tom');
 
-crashSoundBtn.addEventListener('click', () => {
-  console.log('Sound Button Clicked');
-});
+function playCrashSound() {
+  console.log('Crash Sound Button Clicked');
+}
 
-kickSoundBtnSoundBtn.addEventListener('click', () => {
-  console.log('Sound Button Clicked');
-});
+function playKickSound() {
+  console.log('Kick Sound Button Clicked');
+}
 
-snareSoundBtn.addEventListener('click', () => {
-  console.log('Sound Button Clicked');
-});
+function playSnareSound() {
+  console.log('Snare Sound Button Clicked');
+}
 
-tomSoundBtnSoundBtn.addEventListener('click', () => {
-  console.log('Sound Button Clicked');
+function playTomSound() {
+  console.log('Tom Sound Button Clicked');
+}
+
+crashSoundBtn.addEventListener('click', playCrashSound);
+
+kickSoundBtn.addEventListener('click', playKickSound);
+
+snareSoundBtn.addEventListener('click', playSnareSound);
+
+tomSoundBtn.addEventListener('click', playTomSound);
+
+window.addEventListener('keydown', (e) => {
+  if (e.key === 'c') {
+    playCrashSound();
+  }
+
+  if (e.key === 'k') {
+    playKickSound();
+  }
+
+  if (e.key === 's') {
+    playSnareSound();
+  }
+
+  if (e.key === 't') {
+    playTomSound();
+  }
 });
