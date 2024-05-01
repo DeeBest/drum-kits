@@ -35,19 +35,19 @@ snareSoundBtn.addEventListener('click', playSnareSound);
 tomSoundBtn.addEventListener('click', playTomSound);
 
 window.addEventListener('keydown', (e) => {
-  if (e.key === 'c') {
+  if (e.key === 'a') {
     playCrashSound();
   }
 
-  if (e.key === 'k') {
+  if (e.key === 's') {
     playKickSound();
   }
 
-  if (e.key === 's') {
+  if (e.key === 'k') {
     playSnareSound();
   }
 
-  if (e.key === 't') {
+  if (e.key === 'l') {
     playTomSound();
   }
 });
